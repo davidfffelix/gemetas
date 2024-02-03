@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'register_screen.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -18,19 +16,28 @@ class _HomePageState extends State<HomePage> {
         leading: const Icon(Icons.menu),
         elevation: 1,
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const RegisterScreen();
-              },
-            ),
-          );
-        },
-        label: const Text('Adicionar Meta'),
-        icon: const Icon(Icons.add),
+      body: Column(
+        children: [
+          ListTile(
+            title: const Text('Nome da tarefa'),
+            subtitle: const Text('Descrição da tarefa'),
+            trailing: Checkbox.adaptive(value: false, onChanged: (value) {}),
+          ),
+          ListTile(
+            title: const Text('Nome da tarefa'),
+            subtitle: const Text('Descrição da tarefa'),
+            trailing: Checkbox.adaptive(value: false, onChanged: (value) {}),
+          ),
+          ListTile(
+            title: const Text('Nome da tarefa'),
+            subtitle: const Text('Descrição da tarefa'),
+            trailing: Checkbox.adaptive(value: false, onChanged: (value) {}),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
       ),
     );
   }

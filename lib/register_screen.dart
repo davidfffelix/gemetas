@@ -91,7 +91,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         'Priority order': orderPriorityController,
                         'Checked': checkedController,
                       };
-                      await DatabaseMethodsDetails().addGoal(goalInfoMap, id).then(
+                      await DatabaseMethodsDetails()
+                          .addGoal(goalInfoMap, id)
+                          .then(
                         (value) {
                           return Fluttertoast.showToast(
                             msg: "A meta foi adicionada",
